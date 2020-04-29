@@ -17,7 +17,7 @@
     </header>
 
     <main>
-      <img src="homepageimage.jpg" alt="pretty clouds">
+      <img src="homepageimage.jpg" alt="pretty clouds" class="imagestyles">
     
         
     </main>
