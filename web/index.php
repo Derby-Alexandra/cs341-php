@@ -21,7 +21,7 @@
     </main>
     <footer>
         <p>
-            &copy; 2019 | Alexandra Derby | Canada | <a href="http://www.byui.edu/online">BYU Idaho Online Learning</a>
+            &copy; 2020 | Alexandra Derby | Canada | <a href="http://www.byui.edu/online">BYU Idaho Online Learning</a>
         </p>
     </footer>
 </body>    
