@@ -12,10 +12,12 @@
 </head>
 <body>
     <header>
-        <h1><a href="index.html">Alexandra Derby</a></h1>
+        <h1><a href="index.php">Alexandra Derby</a></h1>
+       
     </header>
 
     <main>
+      <img src="homepageimage.jpg" alt="pretty clouds">
     
         
     </main>
