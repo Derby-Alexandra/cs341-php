@@ -80,5 +80,9 @@ ul {
     list-style-type: none;
 }
 
+.bold_link {
+    font-weight: 600;
+}
+
 
 
