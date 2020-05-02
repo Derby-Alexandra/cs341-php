@@ -11,16 +11,25 @@
     <link rel="stylesheet" href="main.css">
 </head>
 <body>
+    <div>
     <header>
-        <h1><a href="index.php">Alexandra Derby</a></h1>  
+        <h1><a href="index.php">Alexandra Derby</a></h1>
+        <nav>
+            <ul>
+                <li class="link_font"><a href="index.php">Home</a></li>
+                <li class="link_font"><a href="assignments.php">Assignments</a></li>
+                <li class="link_font"><a href="images.php">Images</a></li>
+            </ul>
+        </nav>
+
     </header>
     <main>
         <div class="grid_display">
             <p class="about_me">Welcome to my home page! One of my favorite hobbies is photography. I've included one of my dreamier shots right below this paragraph. If I could, I would spend my days wandering around taking photos just for fun! </p>
-            <p class="about_me bold_link"><a href="assignments.php">Click here to view my assignments!</a></p>
-        <img src="homepageimage.jpg" alt="pretty clouds" class="imagestyles">
+        <img src="homepageimages/homepageimage.jpg" alt="pretty clouds" class="imagestyles">
         </div>
     </main>
+        </div>
     <footer>
         <p>&copy; 2020 | Alexandra Derby | Canada | <a href="http://www.byui.edu/online">BYU Idaho Online Learning</a></p>
     </footer>

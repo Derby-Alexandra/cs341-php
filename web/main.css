@@ -1,52 +1,82 @@
 @import url('https://fonts.googleapis.com/css2?family=Gloria+Hallelujah&family=Open+Sans&display=swap');
+
 * { margin: 0; box-sizing: border-box; } 
 
-body { 
-    font-size: 16px; 
-    line-height: 32px;
-    font-family: 'Open Sans', sans-serif;
-    color: #464e52;
-    background-color: #838FAB;
-}
+:root { background-color: #d5c5c8; }
 
+/*header styles*/
+
+header { background-color: #838FAB; }
 
 h1 {
     font-size: 3em;
     color: #464e52;
     font-family: 'Gloria Hallelujah', cursive;
+    margin-top: -10px;
+    text-align: center;
 }
 
-h2 {
-    color: #464e52;
+hr {
+    border: solid 1px;
+    background-color: #464e52;
 }
 
 a {
     text-decoration: none;
     color: #464e52;
 }
-    
-a:hover {
-    color: #6c6986;
+
+a:hover { color: #d5c5c8; }
+
+nav {
+    line-height: 1em;
+    margin-top: -20px;
 }
 
-header, main, footer {
+ul {
+    list-style-type: none;
+    text-align: center;
+/*    margin-left: -40px;*/
+    padding: 1px;
+}
+
+.link_font {
+    display: inline-block;
+    border: solid 2px;
+    border-radius: 4px;
+    padding: 3px;
+    font-family: 'Gloria Hallelujah', cursive;
+}
+
+.link_font:hover {
+        background-color: #464e52;
+}
+
+/*body styles*/
+
+body { 
+    font-size: 16px; 
+    font-family: 'Open Sans', sans-serif;
+    color: #464e52;
+    background-color: #838FAB;
+}
+
+header, body, footer {
     margin: 1.25rem auto;
     padding: .5rem;
     max-width: 650px;
     background-color: #838FAB;
 }
 
-header {
-    text-align: center;
-    background-color: #838FAB;
+main {
+    line-height: 1.5em;
+    margin-left: 50px;
+    margin-right: 50px;
 }
 
-
-footer {
-    font-size: 0.7em;
-    padding-top: 10px;
+.about_me {
     text-align: center;
-    background-color: #838FAB;
+    margin-bottom: 30px;
 }
 
 .grid_display {
@@ -54,35 +84,29 @@ footer {
     grid-template-columns: auto;
 }
 
-.column_display {
-    display: grid;
-    grid-template-columns: auto auto;
-    text-align: center;
-    font-family: 'Gloria Hallelujah', cursive;
-
-}
+/*image styles*/
 
 .imagestyles {
-    max-width: 100%;
-    display: block;
+    max-width: 75%;
     margin: auto;
     border-radius: 10px;
     box-shadow: 5px 5px #464e52;
 }
 
-.about_me {
+.grid_for_images {
+    display: grid;
+    grid-template-columns: auto auto auto;
+}
+.grid_images {
+    max-width: 100%;
+    padding: 5px;
+}
+/*footer styles*/
+
+footer {
+    font-size: 0.7em;
+    padding-top: 10px;
     text-align: center;
-    margin-bottom: 40px;
-    margin-top: -25px;
+    background-color: #838FAB;
 }
-
-ul {
-    list-style-type: none;
-}
-
-.bold_link {
-    font-weight: 600;
-}
-
-
 
