@@ -5,7 +5,6 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Alexandra Derby's CS341 Images | BYU-Idaho</title>
-    <!-- <script type="text/javascript" src=""></script> -->
     <link rel="stylesheet" href="normalize.css">
     <link rel="stylesheet" href="main.css">
 </head>
@@ -28,5 +27,6 @@
     <footer>
         <p>&copy; 2020 | Alexandra Derby | Canada | <a href="http://www.byui.edu/online">BYU Idaho Online Learning</a></p>
     </footer>
+    <script type="text/javascript" src="hpjavascript.js"></script>
 </body>
 </html>
