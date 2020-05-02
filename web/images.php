@@ -11,7 +11,7 @@
 </head>
 <body>
     <header>
-        <php? include 'header.php' ?>
+        <?php include 'header.php';?>   
     </header>
     <div class="grid_for_images">
         <img src="homepageimages/image1.JPG" alt="pretty clouds" class="grid_images">

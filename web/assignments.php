@@ -11,7 +11,7 @@
 </head>
 <body>
      <header>
-        <php? include 'header.php' ?>
+         <?php include 'header.php';?>
      </header>
     <main class="assignments_color">
         <div class="grid_display about_me">
