@@ -23,10 +23,16 @@
         <img src="homepageimages/image8-min.JPG" alt="mountains and people" class="grid_images">
         <img src="homepageimages/image9-min.JPG" alt="snowy mountains" class="grid_images">
     </div>
-
+        <div id="image_zoom" class="image_zoom">
+            <div class="child_div_image">
+                <div class="close_image" onclick="close_image()" id="close_image">X</div>
+                <img id="zoom_style" class="zoom_style">
+            </div>
+        </div>
     <footer>
         <p>&copy; 2020 | Alexandra Derby | Canada | <a href="http://www.byui.edu/online">BYU Idaho Online Learning</a></p>
     </footer>
-    <script type="text/javascript" src="hpjavascript.js"></script>
+    <script type="text/javascript" src="hpjavascript.js"></script> 
 </body>
 </html>
+
