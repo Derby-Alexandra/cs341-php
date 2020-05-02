@@ -14,15 +14,15 @@
         <?php include 'header.php';?>   
     </header>
     <div class="grid_for_images">
-        <img src="homepageimages/image1.JPG" alt="pretty clouds" class="grid_images">
-        <img src="homepageimages/image2.JPG" alt="pretty clouds" class="grid_images">
-        <img src="homepageimages/image3.JPG" alt="pretty clouds" class="grid_images">
-        <img src="homepageimages/image4.JPG" alt="pretty clouds" class="grid_images">
-        <img src="homepageimages/image5.JPG" alt="pretty clouds" class="grid_images">
+        <img src="homepageimages/image1.JPG" alt="blurry tree" class="grid_images">
+        <img src="homepageimages/image2.JPG" alt="sky and clouds" class="grid_images">
+        <img src="homepageimages/image3.JPG" alt="volcano" class="grid_images">
+        <img src="homepageimages/image4.JPG" alt="mountain and mist" class="grid_images">
+        <img src="homepageimages/image5.JPG" alt="open road" class="grid_images">
         <img src="homepageimages/homepageimage.jpg" alt="pretty clouds" class="grid_images">
-        <img src="homepageimages/image7.JPG" alt="pretty clouds" class="grid_images">
-        <img src="homepageimages/image8.JPG" alt="pretty clouds" class="grid_images">
-        <img src="homepageimages/image9.JPG" alt="pretty clouds" class="grid_images">
+        <img src="homepageimages/image7.JPG" alt="pink alley" class="grid_images">
+        <img src="homepageimages/image8.JPG" alt="mountains and people" class="grid_images">
+        <img src="homepageimages/image9.JPG" alt="snowy mountains" class="grid_images">
     </div>
 
     <footer>

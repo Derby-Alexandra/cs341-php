@@ -29,10 +29,11 @@
                 <li>Week 12: </li>
                 <li>Week 13: </li>
                 <li>Week 14: </li>
-                <li>Week 15: </li>
             </ul>
         </div>
     </main>
-    
+    <footer>
+        <p>&copy; 2020 | Alexandra Derby | Canada | <a href="http://www.byui.edu/online">BYU Idaho Online Learning</a></p>
+    </footer>
 </body>
 </html>
