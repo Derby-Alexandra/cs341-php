@@ -11,14 +11,7 @@
 </head>
 <body>
     <header>
-        <h1><a href="index.php">Alexandra Derby</a></h1>
-        <nav>
-            <ul>
-                <li class="link_font"><a href="#">Home</a></li>
-                <li class="link_font"><a href="#">Assignments</a></li>
-                <li class="link_font"><a href="#">Images</a></li>
-            </ul>
-        </nav>
+        <php? include 'header.php' ?>
     </header>
     <div class="grid_for_images">
         <img src="homepageimages/image1.JPG" alt="pretty clouds" class="grid_images">

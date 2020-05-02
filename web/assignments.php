@@ -10,16 +10,9 @@
     <link rel="stylesheet" href="main.css">
 </head>
 <body>
-  <header>
-        <h1><a href="index.php">Alexandra Derby</a></h1>
-        <nav>
-            <ul>
-                <li class="link_font"><a href="#">Home</a></li>
-                <li class="link_font"><a href="#">Assignments</a></li>
-                <li class="link_font"><a href="#">Images</a></li>
-            </ul>
-        </nav>
-    </header>
+     <header>
+        <php? include 'header.php' ?>
+     </header>
     <main class="assignments_color">
         <div class="grid_display about_me">
             <ul>
