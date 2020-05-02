@@ -18,7 +18,7 @@
     <main>
         <div class="grid_display">
             <p class="about_me">Welcome to my home page! One of my favorite hobbies is photography. I've included one of my dreamier shots right below this paragraph. If I could, I would spend my days wandering around taking photos just for fun! </p>
-        <img src="homepageimages/homepageimage.jpg" alt="pretty clouds" class="imagestyles">
+        <img src="homepageimages/homepageimage-min.jpg" alt="pretty clouds" class="imagestyles">
         </div>
     </main>
         </div>
