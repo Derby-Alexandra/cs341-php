@@ -16,7 +16,7 @@
     <main class="assignments_color">
         <div class="grid_display about_me">
             <ul>
-                <li>Week 1: </li>
+                <li>Week 1: <a href="weeklyproves/hello.html">Hello World!</a> </li>
                 <li>Week 2: </li>
                 <li>Week 3: </li>
                 <li>Week 4: </li>
