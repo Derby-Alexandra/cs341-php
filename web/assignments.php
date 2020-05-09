@@ -17,8 +17,7 @@
         <div class="grid_display about_me">
             <ul>
                 <li>Week 1: <a href="weeklyproves/hello.html">Hello World!</a> </li>
-                <li>Week 2: </li>
-                <li>Week 3: </li>
+                <li>Week 3: <a href="weeklyproves/week3prove/index.html">Shopping Cart</a> </li>
                 <li>Week 4: </li>
                 <li>Week 5: </li>
                 <li>Week 6: </li>
