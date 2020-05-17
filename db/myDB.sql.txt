@@ -1,0 +1,29 @@
+DROP TABLE artist_account;
+DROP TABLE artwork;
+DROP TABLE purchase;
+
+CREATE table artist_account (
+	artistId SERIAL PRIMARY KEY,
+	email VARCHAR(256) NOT NULL,
+	password VARCHAR(256) NOT NULL,
+	stripeAccountId INT NOT NULL,
+	firstName VARCHAR(256) NOT NULL,
+	lastName VARCHAR(256) NOT NULL,
+	accumulatedSales REAL
+);
+
+CREATE table artwork (
+	artworkId SERIAL PRIMARY KEY,
+	artistId BIGINT REFERENCES artist_account(artistId),
+	imageUrl VARCHAR(256) NOT NULL,
+	price REAL NOT NULL,
+	description VARCHAR(500) NOT NULL,
+	resolution VARCHAR(256) NOT NULL
+);
+
+CREATE table purchase (
+	purchaseId SERIAL PRIMARY KEY,
+	artworkId BIGINT REFERENCES artwork(artworkId),
+	date DATE
+);
+
