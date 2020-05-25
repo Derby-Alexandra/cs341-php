@@ -116,7 +116,7 @@ INSERT INTO artwork (
 	resolution
 ) VALUES (
     1,
-    'https://images.app.goo.gl/Vfes26TXZaqGrSKU8',
+    'https://images.unsplash.com/photo-1541680670548-88e8cd23c0f4?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&w=1000&q=80',
     1500.00,
     'beautiful piece of artwork featuring vibrant pinks and blues',
     '1000 x 400px');
@@ -129,7 +129,7 @@ INSERT INTO artwork (
 	resolution
 ) VALUES (
     2,
-    'https://images.app.goo.gl/VZDC6Dyz6zCwevLf8',
+    'https://images.unsplash.com/photo-1533158326339-7f3cf2404354?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&w=1000&q=80',
     1100.00,
     'blurry and beautiful, featuring pastel pinks and blues',
     '1500 x 600px');
@@ -142,7 +142,7 @@ INSERT INTO artwork (
 	resolution
 ) VALUES (
     3,
-    'https://images.app.goo.gl/8cKgdEF692YzSeQW9',
+    'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcR0UBMK69vrJC5rybMD3ElSDx3DeiK6MJCwsdHvxBj1UEZh2JUegA&s',
     1000.00,
     'when accidents become art. a wonderful black and yellow mess',
     '2000 x 1100px');
@@ -155,7 +155,7 @@ INSERT INTO artwork (
 	resolution
 ) VALUES (
     4,
-    'https://images.app.goo.gl/AoU9vr36Kvun6vbp8',
+    'https://images.unsplash.com/photo-1564483658547-215f1846c6fb?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&w=1000&q=80',
     1200.00,
     'abstract and textured - the green beauty',
     '3400 x 1000px');
@@ -168,7 +168,7 @@ INSERT INTO artwork (
 	resolution
 ) VALUES (
     5,
-    'https://images.app.goo.gl/P8SCsTkCCfCJouwX7',
+    'https://images.unsplash.com/photo-1533122250115-6bb28e9a48c3?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1000&q=80',
     1900.00,
     'modern muse - a tropical painting',
     '6000 x 4000px');
