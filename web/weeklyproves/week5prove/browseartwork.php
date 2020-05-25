@@ -27,7 +27,7 @@ if (isset($_POST['searchname'])) {
         <?php include 'header.php';?>
     </header>
     <main>
-        <form>
+        <form action="POST">
             <label for="searchname">Search artist name:</label>
             <input type="text" name="searchname">
             <button type="submit">Search</button>
