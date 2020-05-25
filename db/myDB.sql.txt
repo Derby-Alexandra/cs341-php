@@ -6,7 +6,7 @@ CREATE table artist_account (
 	artistId SERIAL PRIMARY KEY,
 	email VARCHAR(256) NOT NULL,
 	password VARCHAR(256) NOT NULL,
-	stripeAccountId INT NOT NULL,
+	stripeAccountId VARCHAR(256) NOT NULL,
 	firstName VARCHAR(256) NOT NULL,
 	lastName VARCHAR(256) NOT NULL,
 	accumulatedSales REAL
@@ -24,6 +24,179 @@ CREATE table artwork (
 CREATE table purchase (
 	purchaseId SERIAL PRIMARY KEY,
 	artworkId BIGINT REFERENCES artwork(artworkId),
-	date DATE
+	date DATE default NOW()
 );
+
+fake data inserts:
+
+fake artist account inserts:
+
+INSERT INTO artist_account (
+	email,
+	password,
+	stripeAccountId,
+	firstName,
+	lastName,
+	accumulatedSales
+) VALUES (
+    '123@fakemail.com',
+    'password',
+    'stripeid1',
+    'alexandra',
+    'derby',
+    0);
+    
+INSERT INTO artist_account (
+	email,
+	password,
+	stripeAccountId,
+	firstName,
+	lastName,
+	accumulatedSales
+) VALUES (
+    '124@fakemail.com',
+    'password',
+    'stripeid2',
+    'alexander',
+    'graham',
+    0);
+    
+INSERT INTO artist_account (
+	email,
+	password,
+	stripeAccountId,
+	firstName,
+	lastName,
+	accumulatedSales
+) VALUES (
+    '125@fakemail.com',
+    'password',
+    'stripeid3',
+    'sally',
+    'bell',
+    0);
+    
+INSERT INTO artist_account (
+	email,
+	password,
+	stripeAccountId,
+	firstName,
+	lastName,
+	accumulatedSales
+) VALUES (
+    '126@fakemail.com',
+    'password',
+    'stripeid4',
+    'sean',
+    'melon',
+    0);
+    
+INSERT INTO artist_account (
+	email,
+	password,
+	stripeAccountId,
+	firstName,
+	lastName,
+	accumulatedSales
+) VALUES (
+    '127@fakemail.com',
+    'password',
+    'stripeid5',
+    'perry',
+    'alexandre',
+    0);
+
+fake artwork inserts:
+
+INSERT INTO artwork (
+	artistId,
+	imageUrl, 
+	price,
+	description,
+	resolution
+) VALUES (
+    1,
+    'https://images.app.goo.gl/Vfes26TXZaqGrSKU8',
+    1500.00,
+    'beautiful piece of artwork featuring vibrant pinks and blues',
+    '1000 x 400px');
+    
+    INSERT INTO artwork (
+	artistId,
+	imageUrl, 
+	price,
+	description,
+	resolution
+) VALUES (
+    2,
+    'https://images.app.goo.gl/VZDC6Dyz6zCwevLf8',
+    1100.00,
+    'blurry and beautiful, featuring pastel pinks and blues',
+    '1500 x 600px');
+    
+    INSERT INTO artwork (
+	artistId,
+	imageUrl, 
+	price,
+	description,
+	resolution
+) VALUES (
+    3,
+    'https://images.app.goo.gl/8cKgdEF692YzSeQW9',
+    1000.00,
+    'when accidents become art. a wonderful black and yellow mess',
+    '2000 x 1100px');
+    
+    INSERT INTO artwork (
+	artistId,
+	imageUrl, 
+	price,
+	description,
+	resolution
+) VALUES (
+    4,
+    'https://images.app.goo.gl/AoU9vr36Kvun6vbp8',
+    1200.00,
+    'abstract and textured - the green beauty',
+    '3400 x 1000px');
+    
+    INSERT INTO artwork (
+	artistId,
+	imageUrl, 
+	price,
+	description,
+	resolution
+) VALUES (
+    5,
+    'https://images.app.goo.gl/P8SCsTkCCfCJouwX7',
+    1900.00,
+    'modern muse - a tropical painting',
+    '6000 x 4000px');
+
+fake purchase inserts:
+
+INSERT INTO purchase (
+	artworkId
+) VALUES (
+    1);
+    
+INSERT INTO purchase (
+	artworkId
+) VALUES (
+    2);   
+    
+INSERT INTO purchase (
+	artworkId
+) VALUES (
+    3);
+    
+INSERT INTO purchase (
+	artworkId
+) VALUES (
+    4);
+    
+INSERT INTO purchase (
+	artworkId
+) VALUES (
+    5);
 

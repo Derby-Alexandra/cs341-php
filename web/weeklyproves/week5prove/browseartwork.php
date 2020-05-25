@@ -32,18 +32,24 @@ if (isset($_POST['searchname'])) {
             <input type="text" name="searchname">
             <button type="submit">Search</button>
         </form><br>
-        
+<?php
+        foreach($search_results as $result) {
+?>
         <div class="index_grid_images">
             <div>
-                <img src="" class="" id="">
+                <img src="<?php echo $result['imageUrl']?>" class="index_image_width">
             </div>
             <div>
-                <p>Artist Name: <span></span></p>
-                <p>Description: <span></span></p>
-                <p>Resolution: <span></span></p>
-                <p>Price: <span></span></p>
+                <p>Artist Name: <?php echo $result['firstName']?> <?php echo $result['lastName']?></p>
+                <p>Description: <?php echo $result['description']?></p>
+                <p>Resolution: <?php echo $result['resolution']?></p>
+                <p>Price: <?php echo $result['price']?></p>
             </div>
         </div>
+<?php
+        }
+?>
+
         
     </main>
     <footer>
