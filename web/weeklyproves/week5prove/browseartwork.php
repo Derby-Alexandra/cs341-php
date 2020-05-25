@@ -1,15 +1,15 @@
 <?php
 // Start the session
 session_start();
-//include 'dbconnect.php';
-//$search_results = [];
-//if (isset($_POST['searchname'])) {
-//    $searchname = $_POST['searchname'];
-//    $query = "SELECT * FROM artwork WHERE firstName LIKE '%$searchname%' OR lastName LIKE '%$searchname%'";
-//    $search_results = $_SESSION['dbconnection']->query($query);
-//} else {
-//    $search_results = $_SESSION['dbconnection']->query("SELECT * FROM artwork");
-//}
+include 'dbconnect.php';
+$search_results = [];
+if (isset($_POST['searchname'])) {
+    $searchname = $_POST['searchname'];
+    $query = "SELECT * FROM artwork WHERE firstName LIKE '%$searchname%' OR lastName LIKE '%$searchname%'";
+    $search_results = $_SESSION['dbconnection']->query($query);
+} else {
+    $search_results = $_SESSION['dbconnection']->query("SELECT * FROM artwork");
+}
 ?>
 <!DOCTYPE html>
 <html lang="en-US">   
