@@ -5,7 +5,7 @@ include 'dbconnect.php';
 $search_results = [];
 if (isset($_POST['searchname'])) {
     $searchname = $_POST['searchname'];
-    $query = "SELECT * FROM artwork WHERE firstName LIKE '%$searchname%' OR lastName LIKE '%$searchname%'";
+    $query = "SELECT * FROM artwork WHERE firstname LIKE '%$searchname%' OR lastname LIKE '%$searchname%'";
     $search_results = $_SESSION['dbconnection']->query($query);
 } else {
     $search_results = $_SESSION['dbconnection']->query("SELECT * FROM artwork");
@@ -37,10 +37,10 @@ if (isset($_POST['searchname'])) {
 ?>
         <div class="index_grid_images">
             <div>
-                <img src="<?php echo $result['imageUrl']?>" class="index_image_width">
+                <img src="<?php echo $result['imageurl']?>" class="index_image_width">
             </div>
             <div>
-                <p>Artist Name: <?php echo $result['firstName']?> <?php echo $result['lastName']?></p>
+                <p>Artist Name: <?php echo $result['firstname']?> <?php echo $result['lastname']?></p>
                 <p>Description: <?php echo $result['description']?></p>
                 <p>Resolution: <?php echo $result['resolution']?></p>
                 <p>Price: <?php echo $result['price']?></p>
