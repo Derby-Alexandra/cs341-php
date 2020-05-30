@@ -1,4 +1,4 @@
-        <h1>Digital Photo Sales</h1>
+<h1>Digital Photo Sales</h1>
         <nav>
             <ul>
                 <li class="link_font"><a href="artistaccount.php">Home</a></li>
@@ -10,5 +10,5 @@
     <script>
         let userdata = JSON.parse(localStorage.getItem('userdata'))
         document.getElementById('artistlink').href = "artworkinformation.php?artistid=" + userdata.artistid
-
     </script>
+    
