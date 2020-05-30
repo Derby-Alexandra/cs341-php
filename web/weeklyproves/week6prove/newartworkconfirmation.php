@@ -12,6 +12,6 @@ $price = $_POST['price'];
 $description = $_POST['description'];
 $resolution = $_POST['resolution'];
 $artistid = $_POST['artistid'];
- $_SESSION['dbconnection']->query("INSERT INTO artwork (artistid, imageurl, price, description, resolution) VALUES ('$artistid', '$imageurl', '$price', '$description', '$resolution')");
+$_SESSION['dbconnection']->query("INSERT INTO artwork (artistid, imageurl, price, description, resolution) VALUES ($artistid, '$imageurl', '$price', '$description', '$resolution')");
 header("Location: artworkinformation.php?artistid=$artistid");
 ?>
