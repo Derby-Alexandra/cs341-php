@@ -2,9 +2,9 @@
 // Start the session
 session_start();
 // START: code to display errors
-//ini_set('display_errors', '1');
-//ini_set('display_startup_errors', '1');
-//error_reporting(E_ALL);
+ini_set('display_errors', '1');
+ini_set('display_startup_errors', '1');
+error_reporting(E_ALL);
 // END: code to display errors
 include 'dbconnect.php';
 $firstname = $_POST['firstname'];
@@ -34,7 +34,7 @@ $stripeaccountid = $_POST['stripeaccountid'];
 ?>
         <h3 id="confirmation">Error - Account not created. Please click <u><a href="artistlogin.php">HERE</a></u> to try again.</h3>
 <?php 
-            else {
+        } else {
 ?>
                 <h3 id="confirmation">"Your account has been created! Please click <u><a href="artistlogin.php">HERE</a></u> to login.";</h3>
 <?php
