@@ -1,5 +1,6 @@
 <?php
 // Start the session
+        var_dump($_SESSION['userdata']);
 session_start();
 include 'dbconnect.php';
         var_dump($_SESSION['userdata']);
