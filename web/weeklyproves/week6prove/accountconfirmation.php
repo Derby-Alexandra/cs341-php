@@ -36,7 +36,7 @@ $stripeaccountid = $_POST['stripeaccountid'];
 <?php 
         } else {
 ?>
-                <h3 id="confirmation">"Your account has been created! Please click <u><a href="artistlogin.php">HERE</a></u> to login.";</h3>
+                <h3 id="confirmation">Your account has been created! Please click <u><a href="artistlogin.php">HERE</a></u> to login.</h3>
 <?php
             };
 ?>               

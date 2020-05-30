@@ -1,6 +1,15 @@
 <?php
 // Start the session
 session_start();
+include 'dbconnect.php';
+$email = $_POST['email'];
+$password = $_POST['password'];
+$accountinfo = $SESSION_['dbconnection']->query("SELECT * FROM artist_account WHERE email = '$email'");
+foreach($accountinfo as $result) {
+    if(!$password == $result['password']) {
+        php header("artistlogin.php");
+    }
+}
 ?>
 <!DOCTYPE html>
 <html lang="en-US">   
