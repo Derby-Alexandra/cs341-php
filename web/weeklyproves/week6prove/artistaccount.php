@@ -12,7 +12,7 @@ $password = $_POST['password'];
 $accountinfo = $_SESSION['dbconnection']->query("SELECT * FROM artist_account WHERE email = '$email'");
 foreach($accountinfo as $result) {
     if($password == $result['password']) {
-        $_SESSION['userdata'] = $result;
+       $userdata = $result;
     } else {
         header("Location: artistlogin.php");
     }
@@ -28,6 +28,7 @@ foreach($accountinfo as $result) {
     <!-- <script type="text/javascript" src=""></script> -->
     <link rel="stylesheet" href="normalize.css">
     <link rel="stylesheet" href="main.css">
+    <script>localStorage.setItem('userdata', JSON.stringify(<?php echo $userdata ?>));</script>
 </head>
 <body>
     <header>
