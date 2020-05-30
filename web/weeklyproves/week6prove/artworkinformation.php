@@ -42,8 +42,7 @@ $artworks = [];
                 <label for="resolution">Resolution:</label>
                 <input type="text" name="resolution" required><br>
                 
-                <input type="hidden" name="artistid" id="hiddenartistid">
-                <input type="hidden" name="artworkid" id="hiddenartworkid">
+                <input type="hidden" name="artistid" value=<?php echo $artistid; ?>>
                 
                 <button type="submit">Add</button>
             </form>
@@ -70,10 +69,6 @@ $artworks = [];
         <p>&copy; 2020 | Alexandra Derby | Canada | <a href="http://www.byui.edu/online">BYU Idaho Online Learning</a></p>
     </footer>
     <script type="text/javascript" src="scripts/imagedata.js"></script> 
-    <script type="text/javascript" src="scripts/javascript.js"></script> 
-        <script>
-        let userdata = JSON.parse(localStorage.getItem('userdata'))
-        document.getElementById('hiddenartistid').value = userdata.artistid
-    </script>
+    <script type="text/javascript" src="scripts/javascript.js"></script>
 </body>
 </html>
