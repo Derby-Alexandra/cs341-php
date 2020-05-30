@@ -1,6 +1,8 @@
 <?php
 // Start the session
 session_start();
+include 'dbconnect.php';
+//$_SESSION['userdata'] = $result;
 ?>
 <!DOCTYPE html>
 <html lang="en-US">   
@@ -18,11 +20,11 @@ session_start();
         <?php include 'artistheader.php';?>
     </header>
     <main>
-        <p> Artist ID:<br>
-            First Name:<br>
-            Last Name:<br>
-            Email:<br>
-<!--            Accumulated Sales:<br>-->
+        <p> Artist ID: <?php echo $_SESSION['userdata']['artistid']?><br>
+            First Name: <?php echo $_SESSION['userdata']['firstname']?><br>
+            Last Name: <?php echo $_SESSION['userdata']['lastname']?><br>
+            Email: <?php echo $_SESSION['userdata']['email']?><br>
+            Accumulated Sales: <?php echo $_SESSION['userdata']['accumulatedsales']?><br>
         </p>
     </main>
     <footer>

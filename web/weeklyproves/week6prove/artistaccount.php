@@ -2,17 +2,19 @@
 // Start the session
 session_start();
 // START: code to display errors
-ini_set('display_errors', '1');
-ini_set('display_startup_errors', '1');
-error_reporting(E_ALL);
+//ini_set('display_errors', '1');
+//ini_set('display_startup_errors', '1');
+//error_reporting(E_ALL);
 // END: code to display errors
 include 'dbconnect.php';
 $email = $_POST['email'];
 $password = $_POST['password'];
 $accountinfo = $_SESSION['dbconnection']->query("SELECT * FROM artist_account WHERE email = '$email'");
 foreach($accountinfo as $result) {
-    if(!$password == $result['password']) {
-        header("artistlogin.php");
+    if($password == $result['password']) {
+        $_SESSION['userdata'] = $result;
+    } else {
+         header("artistlogin.php");
     }
 }
 ?>
