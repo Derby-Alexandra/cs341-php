@@ -12,8 +12,7 @@ $lastname = $_POST['lastname'];
 $email = $_POST['email'];
 $newpassword = $_POST['newpassword'];
 $stripeaccountid = $_POST['stripeaccountid'];
-$query = "INSERT INTO artist_account (email, password, stripeaccountid, firstname, lastname, accumulatedsales) VALUES ('$email', '$newpassword', '$stripeaccountid', '$firstname, '$lastname', 0.00)";
-$sql = $_SESSION['dbconnection']->query($query);
+$sql = $_SESSION['dbconnection']->query("INSERT INTO artist_account (email, password, stripeaccountid, firstname, lastname, accumulatedsales) VALUES ('$email', '$newpassword', '$stripeaccountid', '$firstname', '$lastname', 0)");
 ?>
 <!DOCTYPE html>
 <html lang="en-US">   
