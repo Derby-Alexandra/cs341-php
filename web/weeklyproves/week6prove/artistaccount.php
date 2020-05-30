@@ -14,7 +14,7 @@ foreach($accountinfo as $result) {
     if($password == $result['password']) {
         $_SESSION['userdata'] = $result;
     } else {
-//        header("artistlogin.php");
+        header("Location: artistlogin.php");
     }
 }
 ?>
