@@ -16,5 +16,5 @@ $_SESSION['dbconnection']->query("INSERT INTO artwork (artistid, imageurl, price
 header("Location: artworkinformation.php?artistid=$artistid");
 ?>
 <script>
-document.getElementById('artworkadded').display = block;
+document.getElementById('artworkadded').style.innerHTML = block;
 </script>
