@@ -1,8 +1,4 @@
-<?php
-// Start the session
-session_start();
-include 'dbconnect.php';
-?>
+
 <!DOCTYPE html>
 <html lang="en-US">   
 <head>
@@ -19,12 +15,29 @@ include 'dbconnect.php';
         <?php include 'artistheader.php';?>
     </header>
     <main>
-        <p> Artist ID: <span id='artistid'></span><br>
+        <div>
+            Artist ID: <span id='artistid'></span><br>
             First Name: <span id='firstname'></span><br>
             Last Name: <span id='lastname'></span><br>
             Email: <span id='email'></span><br>
             Accumulated Sales: <span id='accumulatedsales'></span><br>
-        </p>
+        </div>
+        <div><br>
+            <p>Update your password:</p>
+            <form action="passwordconfirmation.php" method="POST">
+                
+                <label for="oldpassword">Old Password:</label>
+                <input type="password" name="oldpassword" required><br>
+                
+                <label for="newpassword">New Password:</label>
+                <input type="password" name="newpassword" required><br>
+                
+                <label for="newpassword2">Enter New Password Again:</label>
+                <input type="password" name="newpassword2" required><br>
+                
+                <button type="submit">Update</button>
+            </form>
+        </div>
     </main>
     <footer>
         <p>&copy; 2020 | Alexandra Derby | Canada | <a href="http://www.byui.edu/online">BYU Idaho Online Learning</a></p>
