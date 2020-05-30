@@ -7,20 +7,7 @@ $lastname = $_POST['lastname'];
 $email = $_POST['email'];
 $newpassword = $_POST['newpassword'];
 $stripeaccountid = $_POST['stripeaccountid'];
-INSERT INTO artist_account (
-	email,
-	password,
-	stripeAccountId,
-	firstName,
-	lastName,
-	accumulatedSales
-) VALUES (
-    $email,
-    $newpassword,
-    $stripeaccountid,
-    $firstname,
-    $lastname,
-    0);
+$sql = "INSERT INTO artist_account (email, password, stripeaccountid, firstname, lastname, accumulatedSales) VALUES ($email, $newpassword, $stripeaccountid, $firstname, $lastname, 0)";
 ?>
 <!DOCTYPE html>
 <html lang="en-US">   
