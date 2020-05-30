@@ -40,7 +40,7 @@ foreach($accountinfo as $result) {
     <main>
         <div class="index_grid_images">
             <a href="accountinformation.php"><img src="images/account-info.JPG" class="index_image_width" alt="view account info"></a>
-            <a href="artworkinformation.php"><img src="images/my-artwork.JPG" class="index_image_width" alt="view account artwork"></a>
+            <a href="artworkinformation.php?artistid=<?php echo $userdata['artistid']"><img src="images/my-artwork.JPG" class="index_image_width" alt="view account artwork"></a>
         </div>
     </main>
     <footer>
