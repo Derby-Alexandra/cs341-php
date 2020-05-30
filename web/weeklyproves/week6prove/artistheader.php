@@ -8,7 +8,7 @@
     </ul>
 </nav>
 <script>
-    let userdata = JSON.parse(localStorage.getItem('userdata'))
+    let userdata = localStorage.getItem('userdata')
     console.log('userdata: ', userdata)
     document.getElementById('artistlink').href = "artworkinformation.php?artistid=" + userdata.artistid
 </script>
