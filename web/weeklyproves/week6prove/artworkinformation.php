@@ -1,9 +1,14 @@
 <?php
 // Start the session
 session_start();
+include 'dbconnect.php';
 ini_set('display_errors', '1');
 ini_set('display_startup_errors', '1');
 error_reporting(E_ALL);
+$artistid = $_GET['artistid'];
+$artworks = [];
+    $query = "SELECT artworkid, imageurl, price, description, resolution FROM artwork WHERE artistid = $artistid";
+    $artworks = $_SESSION['dbconnection']->query($query);
 ?>
 <!DOCTYPE html>
 <html lang="en-US">   
@@ -43,21 +48,23 @@ error_reporting(E_ALL);
                 <button type="submit">Add</button>
             </form>
         </div>
-        
+<?php
+        foreach($artworks as $artwork) {
+?>
         <div class="index_grid_images">
-            <div class="artist_view_artwork">
-                Image:
+            <div>
+                <img src="<?php echo $artwork['imageurl']?>" class="index_image_width">
             </div>
-            <div class="artist_view_description">
-                <p> Artwork ID:<br>
-                    Artist ID:<br>
-                    Image URL:<br>
-                    Price:<br>
-                    Description:<br>
-                    Resolution:<br>
-                </p>
+            <div>
+                <p>Artwork: <?php echo $artwork['artworkid']?></p>
+                <p>Description: <?php echo $artwork['description']?></p>
+                <p>Resolution: <?php echo $artwork['resolution']?></p>
+                <p>Price: <?php echo $artwork['price']?></p>
             </div>
         </div>
+<?php
+        }
+?>
     </main>
     <footer>
         <p>&copy; 2020 | Alexandra Derby | Canada | <a href="http://www.byui.edu/online">BYU Idaho Online Learning</a></p>
