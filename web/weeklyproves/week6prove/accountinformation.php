@@ -35,7 +35,7 @@
                 <label for="newpassword2">Enter New Password Again:</label>
                 <input type="password" name="newpassword2" required><br>
                 
-                <input type="hidden" name="artistid" value="artistid">
+                <input type="hidden" name="artistid" id="hiddenartistid">
                 
                 <button type="submit">Update</button>
             </form>
@@ -51,6 +51,7 @@
         document.getElementById('lastname').innerHTML = userdata.lastname
         document.getElementById('email').innerHTML = userdata.email
         document.getElementById('accumulatedsales').innerHTML = userdata.accumulatedsales
+        document.getElementById('hiddenartistid').value = userdata.artistid
     </script>
     <script type="text/javascript" src="scripts/imagedata.js"></script> 
     <script type="text/javascript" src="scripts/javascript.js"></script> 

@@ -6,7 +6,10 @@ $oldpassword = $_POST['oldpassword'];
 $newpassword = $_POST['newpassword'];
 $newpassword2 = $_POST['newpassword2'];
 $artistid = $_POST['artistid'];
-$databasepassword = $_SESSION['dbconnection']->query("SELECT password FROM artist_account WHERE artist_id = '$artistid'");
+$databasepasswordrow = $_SESSION['dbconnection']->query("SELECT password FROM artist_account WHERE artist_id = '$artistid'");
+    foreach($databasepasswordrow as $result) {
+        $databasepassword = $result['password']
+    }
 ?>
 <!DOCTYPE html>
 <html lang="en-US">   
@@ -27,7 +30,7 @@ $databasepassword = $_SESSION['dbconnection']->query("SELECT password FROM artis
     <main>
         <div>
 <?php
-        if($oldpassword == $databsepassword && $newpassword == $newpassword2) {
+        if($oldpassword == $databasepassword && $newpassword == $newpassword2) {
             $_SESSION['dbconnection']->query("UPDATE artist_account SET password = '$newpassword' WHERE artistid = '$artistid'");
     
 ?> 
