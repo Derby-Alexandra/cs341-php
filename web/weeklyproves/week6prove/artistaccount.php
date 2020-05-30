@@ -10,10 +10,12 @@ include 'dbconnect.php';
 $email = $_POST['email'];
 $password = $_POST['password'];
 $userdata;
+$artistid;
 $accountinfo = $_SESSION['dbconnection']->query("SELECT * FROM artist_account WHERE email = '$email'");
 foreach($accountinfo as $result) {
     if($password == $result['password']) {
-       $userdata = json_encode($result);
+        $artistid = $result['artistid'];
+        $userdata = json_encode($result);
     } else {
         header("Location: artistlogin.php");
     }
@@ -40,7 +42,7 @@ foreach($accountinfo as $result) {
     <main>
         <div class="index_grid_images">
             <a href="accountinformation.php"><img src="images/account-info.JPG" class="index_image_width" alt="view account info"></a>
-            <a href="artworkinformation.php?artistid=<?php echo $userdata['artistid'] ?>"><img src="images/my-artwork.JPG" class="index_image_width" alt="view account artwork"></a>
+            <a href="artworkinformation.php?artistid=<?php echo $artistid; ?>"><img src="images/my-artwork.JPG" class="index_image_width" alt="view account artwork"></a>
         </div>
     </main>
     <footer>
