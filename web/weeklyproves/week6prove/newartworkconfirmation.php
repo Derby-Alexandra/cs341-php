@@ -12,7 +12,7 @@ $price = $_POST['price'];
 $description = $_POST['description'];
 $resolution = $_POST['resolution'];
 $artistid = $_POST['artistid'];
- $_SESSION['dbconnection']->query("INSERT INTO artwork (artistId,imageUrl, price, description, resolution) VALUES ('$artistid', '$imageurl', '$price', '$description', '$resolution') WHERE artistid = '$artistid'");
+ $_SESSION['dbconnection']->query("INSERT INTO artwork (artistid, imageurl, price, description, resolution) VALUES ('$artistid', '$imageurl', '$price', '$description', '$resolution')");
 ?>
 <!DOCTYPE html>
 <html lang="en-US">   
