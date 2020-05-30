@@ -18,7 +18,6 @@ foreach($accountinfo as $result) {
         header("Location: artistlogin.php");
     }
 }
-var_dump($userdata);
 ?>
 <!DOCTYPE html>
 <html lang="en-US">   

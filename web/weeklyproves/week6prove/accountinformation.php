@@ -22,7 +22,7 @@ include 'dbconnect.php';
         <p> Artist ID: <span id='artistid'></span><br>
             First Name: <span id='firstname'></span><br>
             Last Name: <span id='lastname'></span><br>
-            Email: <span id='email'></span>><br>
+            Email: <span id='email'></span><br>
             Accumulated Sales: <span id='accumulatedsales'></span><br>
         </p>
     </main>
