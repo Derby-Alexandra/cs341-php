@@ -9,6 +9,7 @@ error_reporting(E_ALL);
 include 'dbconnect.php';
 $email = $_POST['email'];
 $password = $_POST['password'];
+$userdata;
 $accountinfo = $_SESSION['dbconnection']->query("SELECT * FROM artist_account WHERE email = '$email'");
 foreach($accountinfo as $result) {
     if($password == $result['password']) {
