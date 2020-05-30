@@ -119,6 +119,9 @@ button:active {
     text-align: center;
 }
 
+#artworkadded {
+    display: none;
+}
 /*image styles*/
 
 .imagestyles {

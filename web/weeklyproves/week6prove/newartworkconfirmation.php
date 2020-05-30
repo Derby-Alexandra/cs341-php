@@ -15,3 +15,6 @@ $artistid = $_POST['artistid'];
 $_SESSION['dbconnection']->query("INSERT INTO artwork (artistid, imageurl, price, description, resolution) VALUES ($artistid, '$imageurl', '$price', '$description', '$resolution')");
 header("Location: artworkinformation.php?artistid=$artistid");
 ?>
+<script>
+document.getElementById('artworkadded').innerHTML.display = block;
+</script>

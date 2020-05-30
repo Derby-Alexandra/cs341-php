@@ -47,6 +47,7 @@ $artworks = [];
                 <button type="submit">Add</button>
             </form>
         </div>
+        <div id="artworkadded">Your artwork has been added!</div>
 <?php
         foreach($artworks as $artwork) {
 ?>
@@ -55,7 +56,6 @@ $artworks = [];
                 <img src="<?php echo $artwork['imageurl']?>" class="index_image_width">
             </div>
             <div>
-                <p>Artwork: <?php echo $artwork['artworkid']?></p>
                 <p>Description: <?php echo $artwork['description']?></p>
                 <p>Resolution: <?php echo $artwork['resolution']?></p>
                 <p>Price: <?php echo $artwork['price']?></p>
