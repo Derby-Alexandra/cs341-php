@@ -5,7 +5,8 @@ include 'dbconnect.php';
 $oldpassword = $_POST['oldpassword'];
 $newpassword = $_POST['newpassword'];
 $newpassword2 = $_POST['newpassword2'];
-$databasepassword = $_SESSION['dbconnection']->query("SELECT password FROM artist_account WHERE password = '$oldpassword'");
+$artistid = $_POST['artistid'];
+$databasepassword = $_SESSION['dbconnection']->query("SELECT password FROM artist_account WHERE artist_id = '$artistid'");
 ?>
 <!DOCTYPE html>
 <html lang="en-US">   
@@ -17,6 +18,7 @@ $databasepassword = $_SESSION['dbconnection']->query("SELECT password FROM artis
     <!-- <script type="text/javascript" src=""></script> -->
     <link rel="stylesheet" href="normalize.css">
     <link rel="stylesheet" href="main.css">
+    <script>let userdata = JSON.parse(localStorage.getItem('userdata'))</script>
 </head>
 <body>
     <header>
@@ -25,11 +27,11 @@ $databasepassword = $_SESSION['dbconnection']->query("SELECT password FROM artis
     <main>
         <div>
 <?php
-        if($newpassword == $newpassword2 ) {
-            $_SESSION['dbconnection']->query("UPDATE artist_account SET password = '$newpassword' WHERE password = '$oldpassword'");
+        if($oldpassword == $databsepassword && $newpassword == $newpassword2) {
+            $_SESSION['dbconnection']->query("UPDATE artist_account SET password = '$newpassword' WHERE artistid = '$artistid'");
     
 ?> 
-            <p>Sorry, your passwords do not match. Please try again.</p>
+            <p>Your password has been updated.</p>
 <?php     
         } else {
 ?>

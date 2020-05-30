@@ -35,6 +35,8 @@
                 <label for="newpassword2">Enter New Password Again:</label>
                 <input type="password" name="newpassword2" required><br>
                 
+                <input type="hidden" name="artistid" value="artistid">
+                
                 <button type="submit">Update</button>
             </form>
         </div>
