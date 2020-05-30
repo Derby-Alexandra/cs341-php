@@ -7,4 +7,8 @@
         <li class="link_font"><a href="index.php">Logout</a></li>
     </ul>
 </nav>
+<script>
+    let userdata = JSON.parse(localStorage.getItem('userdata'))
+    document.getElementById('artistlink').href = "artworkinformation.php?artistid=" + userdata.artistid
+</script>
     
