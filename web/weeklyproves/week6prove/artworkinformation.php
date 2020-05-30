@@ -7,7 +7,7 @@ ini_set('display_startup_errors', '1');
 error_reporting(E_ALL);
 $artistid = $_GET['artistid'];
 $artworks = [];
-    $query = "SELECT artworkid, imageurl, price, description, resolution FROM artwork WHERE artistid = $artistid";
+    $query = "SELECT artworkid, imageurl, price, description, resolution FROM artwork WHERE artistid = '$artistid'";
     $artworks = $_SESSION['dbconnection']->query($query);
 ?>
 <!DOCTYPE html>
