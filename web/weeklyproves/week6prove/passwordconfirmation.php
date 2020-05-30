@@ -25,7 +25,7 @@ $databasepassword = $_SESSION['dbconnection']->query("SELECT password FROM artis
     <main>
         <div>
 <?php
-        if($oldpassword == $databasepassword && $newpassword == $newpassword2 ) {
+        if($newpassword == $newpassword2 ) {
             $_SESSION['dbconnection']->query("UPDATE artist_account SET password = '$newpassword' WHERE password = '$oldpassword'");
     
 ?> 
