@@ -13,7 +13,7 @@ $userdata;
 $accountinfo = $_SESSION['dbconnection']->query("SELECT * FROM artist_account WHERE email = '$email'");
 foreach($accountinfo as $result) {
     if($password == $result['password']) {
-       $userdata = $result;
+       $userdata = json_encode($result);
     } else {
         header("Location: artistlogin.php");
     }
