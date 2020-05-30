@@ -2,7 +2,6 @@
 // Start the session
 session_start();
 include 'dbconnect.php';
-        var_dump($_SESSION['userdata']);
 ?>
 <!DOCTYPE html>
 <html lang="en-US">   

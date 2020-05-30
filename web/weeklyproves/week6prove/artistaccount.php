@@ -29,7 +29,9 @@ foreach($accountinfo as $result) {
     <!-- <script type="text/javascript" src=""></script> -->
     <link rel="stylesheet" href="normalize.css">
     <link rel="stylesheet" href="main.css">
-    <script>localStorage.setItem('userdata', JSON.stringify(<?php echo $userdata ?>));</script>
+    <script>
+        localStorage.setItem('userdata', JSON.stringify(<?php echo $userdata; ?>))
+    </script>
 </head>
 <body>
     <header>
