@@ -2,19 +2,19 @@
 // Start the session
 session_start();
 // START: code to display errors
-ini_set('display_errors', '1');
-ini_set('display_startup_errors', '1');
-error_reporting(E_ALL);
+//ini_set('display_errors', '1');
+//ini_set('display_startup_errors', '1');
+//error_reporting(E_ALL);
 // END: code to display errors
 include 'dbconnect.php';
 $oldpassword = $_POST['oldpassword'];
 $newpassword = $_POST['newpassword'];
 $newpassword2 = $_POST['newpassword2'];
 $artistid = $_POST['artistid'];
-$databasepasswordrow = $_SESSION['dbconnection']->query("SELECT password FROM artist_account WHERE artist_id = '$artistid'");
-    foreach($databasepasswordrow as $result) {
-        $databasepassword = $result['password'];
-    }
+$databasepasswordrow = $_SESSION['dbconnection']->query("SELECT password FROM artist_account WHERE artistid = '$artistid'");
+foreach($databasepasswordrow as $result) {
+    $databasepassword = $result['password'];
+}
 ?>
 <!DOCTYPE html>
 <html lang="en-US">   
