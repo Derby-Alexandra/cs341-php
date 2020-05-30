@@ -24,7 +24,7 @@
         </div>
         <div><br>
             <p>Update your password:</p>
-            <form action="passwordconfirmation.php" method="POST">
+            <form action="newpasswordconfirmation.php" method="POST">
                 
                 <label for="oldpassword">Old Password:</label>
                 <input type="password" name="oldpassword" required><br>
