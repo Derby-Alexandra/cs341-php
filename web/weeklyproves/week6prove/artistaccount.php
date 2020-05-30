@@ -13,10 +13,10 @@ $accountinfo = $_SESSION['dbconnection']->query("SELECT * FROM artist_account WH
 foreach($accountinfo as $result) {
     if($password == $result['password']) {
         $_SESSION['userdata'] = $result;
-        var_dump($_SESSION['userdata'];
+        var_dump($_SESSION['userdata']);
         die;
     } else {
-         header("artistlogin.php");
+        header("artistlogin.php");
         die;
     }
 }
