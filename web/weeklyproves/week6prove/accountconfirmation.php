@@ -15,11 +15,11 @@ INSERT INTO artist_account (
 	lastName,
 	accumulatedSales
 ) VALUES (
-    '$email',
-    '$newpassword',
-    '$stripeaccountid',
-    '$firstname',
-    '$lastname',
+    $email,
+    $newpassword,
+    $stripeaccountid,
+    $firstname,
+    $lastname,
     0);
 ?>
 <!DOCTYPE html>
