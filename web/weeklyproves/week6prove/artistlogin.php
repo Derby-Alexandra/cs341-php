@@ -20,7 +20,7 @@ include 'dbconnect.php';
     </header>
     <div>
         <p>Login to your account below:</p><br>
-        <form action="accountconfirmation.php" method="POST">
+        <form action="artistaccount.php" method="POST">
             <label for="email">Email:</label>
             <input type="text" name="email" required><br>
 
@@ -30,7 +30,7 @@ include 'dbconnect.php';
             <button type="submit">Login</button>
         </form><br>
         <p>Create an account:</p><br>
-        <form action="artistlogin.php" method="POST">
+        <form action="accountconfirmation.php" method="POST">
             <label for="firstname">First Name:</label>
             <input type="text" name="firstname" required><br>
             
