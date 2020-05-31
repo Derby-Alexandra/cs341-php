@@ -36,7 +36,7 @@ foreach($databasepasswordrow as $result) {
         <div>
 <?php
         if($oldpassword == $databasepassword && $newpassword == $newpassword2) {
-            $_SESSION['dbconnection']->query("UPDATE artist_account SET password = '$newpassword' WHERE artistid = '$artistid'");
+            $_SESSION['dbconnection']->query("UPDATE artist_account SET password = '$newpassword' WHERE artistid = $artistid");
 ?> 
             <p>Your password has been updated.</p>
 <?php     
