@@ -11,13 +11,15 @@ $email = $_POST['email'];
 $password = $_POST['password'];
 $userdata;
 $artistid;
-$accountinfo = $_SESSION['dbconnection']->query("SELECT * FROM artist_account WHERE email = '$email'");
-foreach($accountinfo as $result) {
-    if($password == $result['password']) {
-        $artistid = $result['artistid'];
-        $userdata = json_encode($result);
-    } else {
-        header("Location: artistlogin.php");
+if ($email && $password){
+    $accountinfo = $_SESSION['dbconnection']->query("SELECT * FROM artist_account WHERE email = '$email'");
+    foreach($accountinfo as $result) {
+        if($password == $result['password']) {
+            $artistid = $result['artistid'];
+            $userdata = json_encode($result);
+        } else {
+            header("Location: artistlogin.php");
+        }
     }
 }
 ?>
