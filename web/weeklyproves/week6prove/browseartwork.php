@@ -5,7 +5,7 @@ include 'dbconnect.php';
 $search_results = [];
 if (isset($_POST['searchname'])) {
     $searchname = $_POST['searchname'];
-    $query = "SELECT a.imageurl, a.price, a.description, a.resolution, b.firstname, b.lastname FROM artwork AS a JOIN artist_account AS b ON a.artistid = b.artistid WHERE b.firstname LIKE '%$searchname%' OR b.lastname LIKE '%$searchname%'";
+    $query = "SELECT a.imageurl, a.price, a.description, a.resolution, b.firstname, b.lastname FROM artwork AS a JOIN artist_account AS b ON a.artistid = b.artistid WHERE lower(b.firstname) LIKE lower('%$searchname%') OR lower(b.lastname) LIKE lower('%$searchname%')";
     $search_results = $_SESSION['dbconnection']->query($query);
 } else {
     $search_results = $_SESSION['dbconnection']->query("SELECT a.imageurl, a.price, a.description, a.resolution, b.firstname, b.lastname FROM artwork AS a JOIN artist_account AS b ON a.artistid = b.artistid");
