@@ -1,7 +1,9 @@
 // generate the image elements
 let images_div = document.getElementById('grid_for_images')
 all_images.forEach((image, index) => {
-    images_div.innerHTML += `<img src='${image.src}' data-index=${index} class='grid_images'>`
+    if (images_div) {
+        images_div.innerHTML += `<img src='${image.src}' data-index=${index} class='grid_images'>`
+    }
 })
     
 
