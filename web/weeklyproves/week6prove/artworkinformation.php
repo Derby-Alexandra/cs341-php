@@ -27,7 +27,7 @@ $artworks = [];
     </header>
     <main>
         <div>
-            Add New Artwork:
+            <p>Add New Artwork:</p>
             <form action="newartworkconfirmation.php" method="POST">
                 
                 <label for="imageurl">Image URL:</label>
@@ -46,8 +46,8 @@ $artworks = [];
                 
                 <button type="submit">Add</button>
             </form>
+            <p>Your artwork will be added at the end of the list.</p>
         </div>
-        <div id="artworkadded">Your artwork has been added!</div>
 <?php
         foreach($artworks as $artwork) {
 ?>
