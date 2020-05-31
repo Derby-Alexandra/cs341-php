@@ -34,7 +34,7 @@ if ($email && $password) {
     <link rel="stylesheet" href="normalize.css">
     <link rel="stylesheet" href="main.css">
     <script>
-        if (<?php echo $userdata ?>) {
+        if ('<?php echo $userdata ?>') {
             localStorage.setItem('userdata', JSON.stringify(<?php echo $userdata; ?>))
         }
     </script>
