@@ -45,7 +45,6 @@
         <p>&copy; 2020 | Alexandra Derby | Canada | <a href="http://www.byui.edu/online">BYU Idaho Online Learning</a></p>
     </footer>
     <script>
-        let userdata = JSON.parse(localStorage.getItem('userdata'))
         document.getElementById('artistid').innerHTML = userdata.artistid
         document.getElementById('firstname').innerHTML = userdata.firstname
         document.getElementById('lastname').innerHTML = userdata.lastname
