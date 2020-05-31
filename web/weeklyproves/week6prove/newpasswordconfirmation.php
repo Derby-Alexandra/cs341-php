@@ -26,7 +26,6 @@ foreach($databasepasswordrow as $result) {
     <!-- <script type="text/javascript" src=""></script> -->
     <link rel="stylesheet" href="normalize.css">
     <link rel="stylesheet" href="main.css">
-    <script>let userdata = JSON.parse(localStorage.getItem('userdata'))</script>
 </head>
 <body>
     <header>
