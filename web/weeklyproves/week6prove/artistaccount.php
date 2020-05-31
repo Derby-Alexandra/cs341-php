@@ -11,15 +11,13 @@ $email = $_POST['email'];
 $password = $_POST['password'];
 $userdata;
 $artistid;
-if ($email && $password){
-    $accountinfo = $_SESSION['dbconnection']->query("SELECT * FROM artist_account WHERE email = '$email'");
-    foreach($accountinfo as $result) {
-        if($password == $result['password']) {
-            $artistid = $result['artistid'];
-            $userdata = json_encode($result);
-        } else {
-            header("Location: artistlogin.php");
-        }
+$accountinfo = $_SESSION['dbconnection']->query("SELECT * FROM artist_account WHERE email = '$email'");
+foreach($accountinfo as $result) {
+    if($password == $result['password']) {
+        $artistid = $result['artistid'];
+        $userdata = json_encode($result);
+    } else {
+        header("Location: artistlogin.php");
     }
 }
 ?>
@@ -34,7 +32,9 @@ if ($email && $password){
     <link rel="stylesheet" href="normalize.css">
     <link rel="stylesheet" href="main.css">
     <script>
-        localStorage.setItem('userdata', JSON.stringify(<?php echo $userdata; ?>))
+        if (<?php echo $userdata ?>) {
+            localStorage.setItem('userdata', JSON.stringify(<?php echo $userdata; ?>))
+        }
     </script>
 </head>
 <body>
