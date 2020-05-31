@@ -11,13 +11,15 @@ $email = $_POST['email'];
 $password = $_POST['password'];
 $userdata;
 $artistid;
-$accountinfo = $_SESSION['dbconnection']->query("SELECT * FROM artist_account WHERE email = '$email'");
-foreach($accountinfo as $result) {
-    if($password == $result['password']) {
-        $artistid = $result['artistid'];
-        $userdata = json_encode($result);
-    } else {
-        header("Location: artistlogin.php");
+if ($email && $password) {
+    $accountinfo = $_SESSION['dbconnection']->query("SELECT * FROM artist_account WHERE email = '$email'");
+    foreach($accountinfo as $result) {
+        if($password == $result['password']) {
+            $artistid = $result['artistid'];
+            $userdata = json_encode($result);
+        } else {
+            header("Location: artistlogin.php");
+        }
     }
 }
 ?>
@@ -44,7 +46,7 @@ foreach($accountinfo as $result) {
     <main>
         <div class="index_grid_images">
             <a href="accountinformation.php"><img src="images/account-info.JPG" class="index_image_width" alt="view account info"></a>
-            <a href="artworkinformation.php?artistid=<?php echo $artistid; ?>"><img src="images/my-artwork.JPG" class="index_image_width" alt="view account artwork"></a>
+            <a id="artworklink"><img src="images/my-artwork.JPG" class="index_image_width" alt="view account artwork"></a>
         </div>
     </main>
     <footer>
@@ -52,5 +54,9 @@ foreach($accountinfo as $result) {
     </footer>
     <script type="text/javascript" src="scripts/imagedata.js"></script> 
     <script type="text/javascript" src="scripts/javascript.js"></script> 
+    <script>
+        let artistid = JSON.parse(localStorage.getItem('userdata')).artistid
+        document.getElementById('artworklink').href=`artworkinformation.php?artistid=${artistid}`
+    </script>
 </body>
 </html>
