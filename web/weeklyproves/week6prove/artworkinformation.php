@@ -60,7 +60,7 @@ $artworks = [];
                 <p>Resolution: <?php echo $artwork['resolution']?></p>
                 <p>Price: <?php echo $artwork['price']?></p>
                 <br>
-                <button href="deleteartwork.php?artworkid=<?php echo $artwork['artworkid'] ?>">Delete</button>
+                <a href="deleteartwork.php?artworkid=<?php echo $artwork['artworkid'] ?>">Delete</a>
             </div>
         </div>
 <?php
