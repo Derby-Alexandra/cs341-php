@@ -9,6 +9,6 @@ error_reporting(E_ALL);
 include 'dbconnect.php';
 $artworkid = $_POST['artworkid'];
 $artistid = $_POST['artistid'];
-$_SESSION['dbconnection']->query("DELETE FROM artwork WHERE $artworkid = artworkid");
+$_SESSION['dbconnection']->query("DELETE FROM artwork WHERE artworkid = $artworkid");
 header("Location: artworkinformation.php?artistid=$artistid");
 ?>
