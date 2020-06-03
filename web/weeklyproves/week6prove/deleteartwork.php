@@ -8,6 +8,7 @@ session_start();
 // END: code to display errors
 include 'dbconnect.php';
 $artworkid = $_GET['artistid'];
+$artistid = $_GET['artistid'];
 $_SESSION['dbconnection']->query("DELETE FROM artwork WHERE $artworkid = artworkid");
 header("Location: artworkinformation.php?artistid=$artistid");
 ?>
