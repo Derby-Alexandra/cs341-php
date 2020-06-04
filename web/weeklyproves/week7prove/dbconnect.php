@@ -1,0 +1,37 @@
+<?php
+if (!isset($_SESSION['dbconnection'])) {
+    try
+    {
+// LOCAL -->
+//      $db = new PDO("pgsql:host=localhost;dbname=$dbName", "postgres ");
+//      $db->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
+//      $_SESSION['dbconnection'] = $db;
+// <-- LOCAL
+    
+// HEROKU -->
+      $dbUrl = getenv('DATABASE_URL');
+
+      $dbOpts = parse_url($dbUrl);
+
+      $dbHost = $dbOpts["host"];
+      $dbPort = $dbOpts["port"];
+      $dbUser = $dbOpts["user"];
+      $dbPassword = $dbOpts["pass"];
+      $dbName = ltrim($dbOpts["path"],'/');
+
+      $db = new PDO("pgsql:host=$dbHost;port=$dbPort;dbname=$dbName", $dbUser, $dbPassword);
+
+      $db->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
+// <-- HEROKU
+        
+      $_SESSION['dbconnection'] = $db;
+        
+    }
+    catch (PDOException $ex)
+    {
+      echo 'Error!: ' . $ex->getMessage();
+      die();
+    }
+}
+
+?>
