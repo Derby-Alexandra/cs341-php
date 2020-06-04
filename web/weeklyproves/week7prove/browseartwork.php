@@ -44,7 +44,7 @@ if (isset($_POST['searchname'])) {
                 <p>Description: <?php echo $result['description']?></p>
                 <p>Resolution: <?php echo $result['resolution']?></p>
                 <p>Price: <?php echo $result['price']?></p>
-
+                <button onclick="add_to_cart()">Add to Cart</button>
             </div>
         </div>
 <?php
@@ -57,6 +57,6 @@ if (isset($_POST['searchname'])) {
         <p>&copy; 2020 | Alexandra Derby | Canada | <a href="http://www.byui.edu/online">BYU Idaho Online Learning</a></p>
     </footer>
     <script type="text/javascript" src="scripts/imagedata.js"></script> 
-    <script type="text/javascript" src="scripts/javascript.js"></script> 
+    <script type="text/javascript" src="scripts/week7javascript.js"></script> 
 </body>
 </html>
