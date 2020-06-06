@@ -1,4 +1,9 @@
-
+<?php
+$artworkids = $_GET['artworkids'];
+$artworkids = str_replace('[','', $artworkids);
+$artworkids = str_replace(']','', $artworkids);
+$results = $_SESSION['dbconnection']->query("SELECT * FROM artwork as a WHERE a.artworkid IN ($artworkids) JOIN artist_account AS b ON a.artistid = b.artistid");
+?>
 <!DOCTYPE html>
 <html lang="en-US">   
 <head>
@@ -21,11 +26,25 @@
         </nav>
     </header>
     <main>
-        <h2 id="empty_cart">Your cart is empty</h2>
-        <div id="cart_items_grid"></div>
-        <div id="checkout_button_div">
-            <button class="checkout_button" id="checkout_button">Proceed to Checkout</button>
-        </div>  
+        <h2 id="empty_cart">Thank you for shopping with us. Here is your cart:</h2>
+<?php
+        foreach($search_results as $result) {
+?>
+        <div class="index_grid_images">
+            <div>
+                <img src="<?php echo $result['imageurl']?>" class="index_image_width">
+            </div>
+            <div>
+                <p>Artist Name: <?php echo $result['firstname']?> <?php echo $result['lastname']?></p>
+                <p>Description: <?php echo $result['description']?></p>
+                <p>Resolution: <?php echo $result['resolution']?></p>
+                <p>Price: <?php echo $result['price']?></p>
+                <button class="removefromcart" data-artworkid=<?php echo $result['artworkid']?>>Remove from Cart</button>
+            </div>
+        </div>
+<?php
+        }
+?>
     </main>
     <footer>
         <p>&copy; 2020 | Alexandra Derby | Canada | <a href="http://www.byui.edu/online">BYU Idaho Online Learning</a></p>
