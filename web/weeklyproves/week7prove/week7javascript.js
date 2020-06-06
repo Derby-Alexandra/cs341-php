@@ -1,6 +1,9 @@
-function add_to_cart(event) {
-    let add_item_index = Number(event.target.dataset.index)
-    let cart_items = JSON.parse(sessionStorage.getItem("cart_items")) || []
-    cart_items.push(add_item_index)
-    sessionStorage.setItem("cart_items", JSON.stringify(cart_items));
+let addtocart = document.getElementsByClassName('addtocart')
+for (let i=0; i<addtocart.length; i++) {
+    addtocart[i].addEventListener('click', function(event) {
+        let cart = localStorage.getItem('cart') || '[]'
+        let parsedcart = JSON.parse(cart)
+        parsedcart.push(event.target.dataset.artworkid)
+        localStorage.setItem('cart', JSON.stringify(parsedcart))
+    })
 }
