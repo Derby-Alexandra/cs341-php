@@ -8,7 +8,7 @@
             </ul>
         </nav>
 <script>
-     document.getElementsById('cartbutton').addEventListener('click', function(event) {
+     document.getElementById('cartbutton').addEventListener('click', function(event) {
         let cart = localStorage.getItem('cart') || '[]'
         window.location=`cart.php?artworkids=${cart}`
      })
