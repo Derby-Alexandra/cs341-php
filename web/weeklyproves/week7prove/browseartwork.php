@@ -56,6 +56,6 @@ if (isset($_POST['searchname'])) {
     <footer>
         <p>&copy; 2020 | Alexandra Derby | Canada | <a href="http://www.byui.edu/online">BYU Idaho Online Learning</a></p>
     </footer>
-    <script type="text/javascript" src="javascript.js"></script>
+    <script type="text/javascript" src="scripts/javascript.js"></script>
 </body>
 </html>
