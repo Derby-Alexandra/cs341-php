@@ -44,7 +44,7 @@ if (isset($_POST['searchname'])) {
                 <p>Description: <?php echo $result['description']?></p>
                 <p>Resolution: <?php echo $result['resolution']?></p>
                 <p>Price: <?php echo $result['price']?></p>
-                <button class="addtocart" data-artworkid="<?php echo $result['artworkid']?>">Add to Cart</button>
+                <button class="addtocart" data-artworkid=<?php echo $result['artworkid']?>>Add to Cart</button>
             </div>
         </div>
 <?php
