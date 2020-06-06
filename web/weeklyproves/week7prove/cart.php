@@ -1,4 +1,7 @@
 <?php
+// Start the session
+session_start();
+include 'dbconnect.php';
 $artworkids = $_GET['artworkids'];
 $artworkids = str_replace('[','', $artworkids);
 $artworkids = str_replace(']','', $artworkids);
