@@ -28,7 +28,7 @@ $results = $_SESSION['dbconnection']->query("SELECT * FROM artwork as a WHERE a.
     <main>
         <h2 id="empty_cart">Thank you for shopping with us. Here is your cart:</h2>
 <?php
-        foreach($search_results as $result) {
+        foreach($results as $result) {
 ?>
         <div class="index_grid_images">
             <div>
