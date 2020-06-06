@@ -8,7 +8,7 @@ error_reporting(E_ALL);
 $artworkids = $_GET['artworkids'];
 $artworkids = str_replace('[','', $artworkids);
 $artworkids = str_replace(']','', $artworkids);
-$results = $_SESSION['dbconnection']->query("SELECT * FROM artwork as a WHERE a.artworkid IN ($artworkids) JOIN artist_account AS b ON a.artistid = b.artistid");
+$results = $_SESSION['dbconnection']->query("SELECT * FROM artwork as a JOIN artist_account AS b ON a.artistid = b.artistid WHERE a.artworkid IN ($artworkids)");
 ?>
 <!DOCTYPE html>
 <html lang="en-US">   
