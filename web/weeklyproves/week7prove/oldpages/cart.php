@@ -50,7 +50,6 @@ $results = $_SESSION['dbconnection']->query("SELECT * FROM artwork as a WHERE a.
         <p>&copy; 2020 | Alexandra Derby | Canada | <a href="http://www.byui.edu/online">BYU Idaho Online Learning</a></p>
     </footer>
     <script type="text/javascript" src="scripts/javascript.js"></script>
-    <script type="text/javascript" src="scripts/cart.js"></script> 
 
 </body>
 </html>
