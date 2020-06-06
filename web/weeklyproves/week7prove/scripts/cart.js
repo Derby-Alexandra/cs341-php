@@ -1,11 +1,11 @@
 // read session storage and get array of image indexes
-let image_indexes = JSON.parse(sessionStorage.getItem("cart_items")) || []
+let parsedcart = JSON.parse(sessionStorage.getItem('cart')) || []
 
 // generate divs or img grid using the image index array to get image
 //  data from the all_images array 
 // if the array has items, display those items (ie. generate the cart item divs)
-if (image_indexes.length) {
-    image_indexes.forEach(image_index => {
+if (parsedcart.length) {
+    parsedcart.forEach(parsedcartitem => {
         document.getElementById('cart_items_grid').innerHTML += `
             <div id="cart_item_${image_index}" class="cart_items_grid">
                 <img class="cart_image" src=${all_images[image_index].src}>
