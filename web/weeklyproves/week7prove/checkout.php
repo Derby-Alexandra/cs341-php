@@ -5,7 +5,7 @@
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <title>CS 341 | Alexandra Derby | BYU-Idaho</title>
-    <meta name="description" content="Shopping Cart">
+    <meta name="description" content="Checkout Page">
     <!-- <script type="text/javascript" src=""></script> -->
     <link rel="stylesheet" href="normalize.css">
     <link rel="stylesheet" href="main.css">

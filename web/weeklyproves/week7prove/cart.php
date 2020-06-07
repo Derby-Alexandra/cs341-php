@@ -46,7 +46,13 @@ if (strlen($artworkids) > 0) {
             </div>
         </div>
 <?php
-        }} else {
+        }
+?>
+                <form action="checkout.php" method="POST">
+                    <button>Checkout</button>
+                </form>
+<?php
+        } else {
 ?>
         <h2>Your Cart is Empty</h2>
 <?php

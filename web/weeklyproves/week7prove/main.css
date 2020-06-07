@@ -40,6 +40,10 @@ ul {
     padding: 1px;
 }
 
+#cartbutton {
+    cursor: pointer;
+}
+
 .link_font {
     display: inline-block;
     border: solid 2px;
