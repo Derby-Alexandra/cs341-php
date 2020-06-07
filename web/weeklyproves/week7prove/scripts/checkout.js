@@ -1,3 +1,3 @@
 function clearcart() {
-    localStorage.removeItem("cart");
+localStorage.removeItem('cart')
 }

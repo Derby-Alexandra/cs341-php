@@ -35,6 +35,6 @@
     <footer>
         <p>&copy; 2020 | Alexandra Derby | Canada | <a href="http://www.byui.edu/online">BYU Idaho Online Learning</a></p>
     </footer>
-    <script type="text/javascript" src="checkout.js"></script>
+    <script type="text/javascript" src="scripts/checkout.js"></script>
 </body>
 </html>
