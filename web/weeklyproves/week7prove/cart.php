@@ -8,7 +8,9 @@ error_reporting(E_ALL);
 $artworkids = $_GET['artworkids'];
 $artworkids = str_replace('[','', $artworkids);
 $artworkids = str_replace(']','', $artworkids);
-$results = $_SESSION['dbconnection']->query("SELECT * FROM artwork as a JOIN artist_account AS b ON a.artistid = b.artistid WHERE a.artworkid IN ($artworkids)");
+if (strlen($artworkids) > 0) {
+    $results = $_SESSION['dbconnection']->query("SELECT * FROM artwork as a JOIN artist_account AS b ON a.artistid = b.artistid WHERE a.artworkid IN ($artworkids)");
+}
 ?>
 <!DOCTYPE html>
 <html lang="en-US">   
@@ -26,8 +28,9 @@ $results = $_SESSION['dbconnection']->query("SELECT * FROM artwork as a JOIN art
         <?php include 'header.php';?>
     </header>
     <main>
-        <h2 id="empty_cart">Thank you for shopping with us. Here is your cart:</h2>
-<?php
+<?php        
+        if (strlen($artworkids) > 0) {
+            
         foreach($results as $result) {
 ?>
         <div class="index_grid_images">
@@ -42,6 +45,10 @@ $results = $_SESSION['dbconnection']->query("SELECT * FROM artwork as a JOIN art
                 <button class="removefromcart" data-artworkid=<?php echo $result['artworkid']?>>Remove from Cart</button>
             </div>
         </div>
+<?php
+        }} else {
+?>
+        <h2>Your Cart is Empty</h2>
 <?php
         }
 ?>
