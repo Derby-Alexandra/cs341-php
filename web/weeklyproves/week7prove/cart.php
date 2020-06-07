@@ -33,7 +33,7 @@ if (strlen($artworkids) > 0) {
             
         foreach($results as $result) {
 ?>
-        <div class="index_grid_images">
+        <div id="index_grid_images_<?php echo  $result['artworkid'] ?>" class="index_grid_images">
             <div>
                 <img src="<?php echo $result['imageurl']?>" class="index_image_width">
             </div>
@@ -62,5 +62,6 @@ if (strlen($artworkids) > 0) {
     <footer>
         <p>&copy; 2020 | Alexandra Derby | Canada | <a href="http://www.byui.edu/online">BYU Idaho Online Learning</a></p>
     </footer>
+    <script src="scripts/removeitem.js"></script>
 </body>
 </html>
