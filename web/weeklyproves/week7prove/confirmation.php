@@ -23,16 +23,9 @@ $country = htmlspecialchars($_POST["country"]);
         <p class="checkout_center">Thank you for placing your order with us!</p>
         <p class="checkout_center">Your order will be shipped to the following address:</p>
         <p class="checkout_center"><?=$address ?>, <?=$city ?>, <?=$province ?>, <?=$country ?></p><br>
-<!--
-        <div class="confirmation_cart_items" id="confirmation_cart_items">
-        </div>
--->
     </main>
     <footer>
         <p>&copy; 2020 | Alexandra Derby | Canada | <a href="http://www.byui.edu/online">BYU Idaho Online Learning</a></p>
     </footer>
-    <script type="text/javascript" src="scripts/imagedata.js"></script>
-    <script type="text/javascript" src="scripts/confirmation.js"></script> 
-
 </body>
 </html>

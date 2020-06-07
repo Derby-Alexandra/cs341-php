@@ -52,7 +52,5 @@
         document.getElementById('accumulatedsales').innerHTML = userdata.accumulatedsales
         document.getElementById('hiddenartistid').value = userdata.artistid
     </script>
-    <script type="text/javascript" src="scripts/imagedata.js"></script> 
-    <script type="text/javascript" src="scripts/javascript.js"></script> 
 </body>
 </html>

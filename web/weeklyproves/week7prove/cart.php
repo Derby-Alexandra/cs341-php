@@ -2,9 +2,9 @@
 // Start the session
 session_start();
 include 'dbconnect.php';
-ini_set('display_errors', '1');
-ini_set('display_startup_errors', '1');
-error_reporting(E_ALL);
+//ini_set('display_errors', '1');
+//ini_set('display_startup_errors', '1');
+//error_reporting(E_ALL);
 $artworkids = $_GET['artworkids'];
 $artworkids = str_replace('[','', $artworkids);
 $artworkids = str_replace(']','', $artworkids);
@@ -62,8 +62,5 @@ if (strlen($artworkids) > 0) {
     <footer>
         <p>&copy; 2020 | Alexandra Derby | Canada | <a href="http://www.byui.edu/online">BYU Idaho Online Learning</a></p>
     </footer>
-    <script type="text/javascript" src="scripts/imagedata.js"></script>
-    <script type="text/javascript" src="scripts/cart.js"></script> 
-
 </body>
 </html>
