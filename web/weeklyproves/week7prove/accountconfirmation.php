@@ -21,8 +21,8 @@ $stripeaccountid = $_POST['stripeaccountid'];
     <title>CS 341 | Alexandra Derby | BYU-Idaho</title>
     <meta name="description" content="Account Confirmation Page">
     <!-- <script type="text/javascript" src=""></script> -->
-    <link rel="stylesheet" href="normalize.css">
-    <link rel="stylesheet" href="main.css">
+    <link rel="stylesheet" href="styles/normalize.css">
+    <link rel="stylesheet" href="styles/main.css">
 </head>
 <body>
     <header>

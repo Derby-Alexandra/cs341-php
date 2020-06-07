@@ -19,8 +19,8 @@ if (isset($_POST['searchname'])) {
     <title>CS 341 | Alexandra Derby | BYU-Idaho</title>
     <meta name="description" content="Browse Artwork">
     <!-- <script type="text/javascript" src=""></script> -->
-    <link rel="stylesheet" href="normalize.css">
-    <link rel="stylesheet" href="main.css">
+    <link rel="stylesheet" href="styles/normalize.css">
+    <link rel="stylesheet" href="styles/main.css">
 </head>
 <body>
     <header>

@@ -20,8 +20,8 @@ if (strlen($artworkids) > 0) {
     <title>CS 341 | Alexandra Derby | BYU-Idaho</title>
     <meta name="description" content="PHP Data Access - Week 5">
     <!-- <script type="text/javascript" src=""></script> -->
-    <link rel="stylesheet" href="normalize.css">
-    <link rel="stylesheet" href="main.css">
+    <link rel="stylesheet" href="styles/normalize.css">
+    <link rel="stylesheet" href="styles/main.css">
 </head>
 <body>
     <header>

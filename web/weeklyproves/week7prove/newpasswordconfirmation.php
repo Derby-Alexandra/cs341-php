@@ -24,8 +24,8 @@ foreach($databasepasswordrow as $result) {
     <title>CS 341 | Alexandra Derby | BYU-Idaho</title>
     <meta name="description" content="password confirmation">
     <!-- <script type="text/javascript" src=""></script> -->
-    <link rel="stylesheet" href="normalize.css">
-    <link rel="stylesheet" href="main.css">
+    <link rel="stylesheet" href="styles/normalize.css">
+    <link rel="stylesheet" href="styles/main.css">
 </head>
 <body>
     <header>
@@ -37,11 +37,11 @@ foreach($databasepasswordrow as $result) {
         if($oldpassword == $databasepassword && $newpassword == $newpassword2) {
             $_SESSION['dbconnection']->query("UPDATE artist_account SET password = '$newpassword' WHERE artistid = $artistid");
 ?> 
-            <p>Your password has been updated.</p>
+            <p class="checkout_center">Your password has been updated.</p>
 <?php     
         } else {
 ?>
-            <p>Sorry, your passwords do not match. Please try again.</p>
+            <p class="checkout_center">Sorry, your passwords do not match. Please try again.</p>
 <?php
         }
 ?>     
